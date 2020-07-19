@@ -2,7 +2,7 @@ const monngoose=require("mongoose")
 const  passport=require('passport')
 const Provider =monngoose.model('Provider')
 
-mondule.exports.register =(req,res,next)=>{
+module.exports.register =(req,res,next)=>{
     var provider=new Provider()
     provider.name=req.body.name
     provider.phone=req.body.phone

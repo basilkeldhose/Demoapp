@@ -16,8 +16,8 @@
                         [(ngModel)]='login.password'>
                 </div>
                 <div>
-                    <button class="btn btn-primary" (click)='save()'>Login</button>
-                </div>
+                    <input class="btn btn-primary" type="button" (click)='save()' value="Login">  
+                  </div>
             </form>
             <div class="alert" *ngIf="serverErrorMessages">
                 {{serverErrorMessages}}

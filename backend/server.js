@@ -17,7 +17,7 @@ const index = require('./index')
 app.use(bodyParser.json());
 app.use(cors());
 app.use(passport.initialize())
-pp.use('/api', index)
+app.use('/api', index)
 
 app.use((err, req, res, next) => {
     if (err.name === 'ValidationError') {
