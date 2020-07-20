@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <form>
+            <form #requestForm='ngForm' (ngSubmit)="requestForm.valid && onSubmit(requestForm)">
                 <div class="form-group">
                     <label for="name">Address</label>
                     <input type="text" [(ngModel)]='requestservice.selectedRequest.address' name="Address">
@@ -15,7 +15,7 @@
                     <input type="text" [(ngModel)]='requestservice.selectedRequest.location' name="location">
                 </div>
                 <div>
-                    <input class="btn btn-primary" type="button" (click)='onSubmit()' value="Submit">  
+                    <input class="btn btn-primary" type="button" value="Submit"> 
                 </div>
             </form>
         </div>
